@@ -8,8 +8,20 @@
         </div>
         <div class="menu">
           <router-link to="/"
-                       class="navigator home_active"><i>首页</i></router-link>
-          <router-link to="/solution_index"
+                       class="navigator home_active">首页</router-link>
+          <router-link to="/"
+                       class="navigator home_active">成员</router-link>
+          <router-link to="/"
+                       class="navigator home_active">组会</router-link>
+          <router-link to="/"
+                       class="navigator home_active">项目</router-link>
+          <router-link to="/"
+                       class="navigator home_active">专利</router-link>
+          <router-link to="/"
+                       class="navigator home_active">论文</router-link>
+          <router-link to="/"
+                       class="navigator home_active">新闻</router-link>
+          <!-- <router-link to="/solution_index"
                        class="navigator home_active">
             <i>解决方案</i>
             <div class="navigator_level2">
@@ -24,25 +36,13 @@
                              class="navigator_item">微会员</router-link>
               </div>
             </div>
-          </router-link>
-          <router-link to="/cases"
-                       class="navigator home_active"><i>经典案例</i></router-link>
-          <router-link to="/parter"
-                       class="navigator home_active"><i>代理加盟</i></router-link>
-          <router-link to="/product_index"
-                       class="navigator home_active">
-            <i>产品套餐</i>
-          </router-link>
-          <router-link to="/news"
-                       class="navigator home_active"><i>行业资讯</i></router-link>
-          <router-link to="/about"
-                       class="navigator home_active"><i>关于我们</i></router-link>
+          </router-link> -->
         </div>
         <div class="func">
           <router-link class="navigator"
                        :to="header.func.href[index]"
                        v-for="(fun,index) in header.func.text"
-                       :key="index"><i>{{fun}}</i></router-link>
+                       :key="index">{{fun}}</router-link>
         </div>
       </div>
     </div>
@@ -54,11 +54,11 @@ export default {
     return {
       header: {
         logo: {
-          text: "臻善网络"
+          text: "SIGIoX"
         },
         func: {
-          text: ["用户登录", "免费注册", "管理中心"],
-          href: ["/", "/", "/", "/"]
+          text: ["登录", "管理中心"],
+          href: ["/", "/", "/"]
         }
       }
     }
@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (max-width: 1200px) {
 }
 @keyframes navbar {
@@ -88,9 +88,10 @@ export default {
     opacity: 1;
   }
 }
+
 .navbar {
   width: 100%;
-  height: 60px;
+  height: 80px;
   font-family: 'microsoft yahei';
   background: none;
   position: absolute;
@@ -100,7 +101,7 @@ export default {
 }
 .navbar .navbar_hover_back {
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: none;
   transition: background-color 0.8s;
 }
@@ -108,8 +109,8 @@ export default {
   background: rgba(0, 0, 0, 0.15);
 }
 .navbar .container {
-  width: 1200px;
-  height: 60px;
+  width: 1400px;
+  height: 80px;
   color: #fff;
   display: flex;
   margin: 0 auto;
@@ -121,31 +122,34 @@ export default {
   width: 150px;
   font-size: 24px;
   text-align: left;
-  height: 39.6px;
+  height: 45px;
   color: #fff;
   margin-top: 11px;
 }
 .navbar .container .logo img,
 .navbar .container .logo a {
-  width: 150px;
-  height: 39.6px;
+  width: 100%;
+  height: 50px;
 }
 .navbar .container .menu {
-  width: 720px;
-  height: 60px;
+  width: 900px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
 }
 .navbar .container .menu > .navigator:first-child {
-  margin-left: 104px;
+  margin-left: 380px;
 }
 .navbar .container .menu > .navigator {
   display: inline-block;
   width: auto;
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
   color: #fff;
-  float: left;
-  font-size: 14px;
-  padding: 0 18px;
+  /* float: right; */
+  font-size: 16px;
+  padding: 0 20px;
+  margin: 0;
   position: relative;
 }
 .navbar .container .menu > .navigator .navigator_level2 {
@@ -153,7 +157,7 @@ export default {
   min-height: 0;
   background: #fff;
   position: absolute;
-  top: 180px;
+  top: 220px;
   left: 0;
   height: 0;
   overflow: hidden;
@@ -199,7 +203,7 @@ export default {
   font-size: 14px;
 }
 .navbar .container .func {
-  width: 282px;
+  width: 170px;
   height: 45px;
   display: flex;
   flex-flow: row nowrap;
@@ -212,7 +216,7 @@ export default {
   line-height: 30px;
   font-size: 14px;
   padding: 0;
-  margin: 30px 0;
+  margin: 0 0;
   margin-left: 2px;
   border: 1px solid #fff;
   text-align: center;
@@ -220,11 +224,11 @@ export default {
   background: none;
   transition: all 0.8s;
 }
-.navbar .container .func .navigator:nth-child(2) {
+/* .navbar .container .func .navigator:nth-child(2) {
   border: 1px solid #fff;
   background: #fff;
   color: #2f5cff;
-}
+} */
 .navbar .container .func .navigator:hover {
   border: 1px solid #fff;
   background: #fff;
