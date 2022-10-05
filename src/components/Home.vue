@@ -12,14 +12,19 @@
     <div class="page">
       <div class="header"></div>
       <div class="medium">
-        <el-row>
+        <introduce-block :content="contentList[0]">
+          <el-button type="primary"
+                     icon="el-icon-s-data"
+                     circle></el-button>
+        </introduce-block>
+        <!-- <el-row>
           <el-button>默认按钮</el-button>
           <el-button type="primary">主要按钮</el-button>
           <el-button type="success">成功按钮</el-button>
           <el-button type="info">信息按钮</el-button>
           <el-button type="warning">警告按钮</el-button>
           <el-button type="danger">危险按钮</el-button>
-        </el-row>
+        </el-row> -->
       </div>
       <div class="footer">
         <Footer></Footer>
@@ -29,17 +34,30 @@
 </template>
 
 <script>
-import { Button, Row } from 'element-ui'
+// import { Button, Row } from 'element-ui'
+import { Button } from 'element-ui'
 import Navbar from './page_structures/Navbar.vue'
 import Footer from './page_structures/Footer.vue'
+import IntroduceBlock from './content_structures/IntroduceBlock.vue'
 
 export default {
   name: 'Home',
+  data () {
+    return {
+      contentList: [
+        {
+          title: '数据湖',
+          text: '数据湖是一个能够以原始格式存储数据的存储系统。'
+        }
+      ]
+    }
+  },
   components: {
     'el-button': Button,
-    'el-row': Row,
+    // 'el-row': Row,
     Navbar,
-    Footer
+    Footer,
+    IntroduceBlock
   }
 }
 </script>
@@ -98,7 +116,7 @@ export default {
 
 .medium {
   flex: 1 0 auto;
-  height: 500px;
+  height: 1000px;
 }
 
 .footer {
