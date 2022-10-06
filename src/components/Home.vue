@@ -12,11 +12,16 @@
     <div class="page">
       <div class="header"></div>
       <div class="medium">
-        <introduce-block :content="contentList[0]">
-          <el-button type="primary"
-                     icon="el-icon-s-data"
-                     circle></el-button>
-        </introduce-block>
+        <p class="introduce-title">SIGIoX主要研究方向</p>
+        <div class="introduce">
+          <introduce-block v-for="(content, idx) in contentList"
+                           :key="idx"
+                           :content="content">
+            <el-button type="primary"
+                       :icon="content.icon"
+                       circle></el-button>
+          </introduce-block>
+        </div>
         <!-- <el-row>
           <el-button>默认按钮</el-button>
           <el-button type="primary">主要按钮</el-button>
@@ -46,8 +51,20 @@ export default {
     return {
       contentList: [
         {
+          title: 'LoRa',
+          text: 'LoRa是semtech公司开发的一种低功耗局域网无线标准，其名称“LoRa”是远距离无线电（Long Range Radio），它最大特点就是在同样的功耗条件下比其他无线方式传播的距离更远，实现了低功耗和远距离的统一，它在同样的功耗下比传统的无线射频通信距离扩大3-5倍。',
+          icon: 'el-icon-upload'
+        },
+        {
           title: '数据湖',
-          text: '数据湖是一个能够以原始格式存储数据的存储系统。'
+          text: '数据湖是一种在系统或存储库中以自然格式存储数据的方法，它有助于以各种模式和结构形式配置数据，通常是对象块或文件。数据湖中的数据包括结构化数据（关系数据库数据），半结构化数据（CSV、XML、JSON等），非结构化数据（电子邮件，文档，PDF）和二进制数据（图像、音频、视频），从而形成一个容纳所有形式数据的集中式数据存储。',
+          icon: 'el-icon-s-data'
+
+        },
+        {
+          title: '区块链',
+          text: '区块链，就是一个又一个区块组成的链条。每一个区块中保存了一定的信息，它们按照各自产生的时间顺序连接成链条。这个链条被保存在所有的服务器中，只要整个系统中有一台服务器可以工作，整条区块链就是安全的。相比于传统的网络，区块链具有两大核心特点：一是数据难以篡改、二是去中心化。基于这两个特点，区块链所记录的信息更加真实可靠，可以帮助解决人们互不信任的问题。',
+          icon: 'el-icon-share'
         }
       ]
     }
@@ -117,6 +134,20 @@ export default {
 .medium {
   flex: 1 0 auto;
   height: 1000px;
+  padding: 100px 0 100px 16%;
+}
+
+.medium .introduce {
+  width: 80%;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: space-around;
+}
+
+.medium .introduce-title {
+  margin: 0 auto 60px 28%;
+  font-weight: 700;
+  font-size: 35px;
 }
 
 .footer {

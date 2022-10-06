@@ -3,7 +3,7 @@
     <div>
       <slot></slot>
       <p id="title">{{content.title}}</p>
-      <p>{{content.text}}</p>
+      <p id="content">{{content.text}}</p>
     </div>
   </el-card>
 </template>
@@ -22,7 +22,17 @@ export default {
 
 <style scoped>
 .box-card {
-  height: 400px;
-  width: 300px;
+  height: 420px;
+  width: 350px;
+}
+#title {
+  font-weight: 600;
+  font-size: 20px;
+}
+#content {
+  color: #606266;
+  font-weight: 350;
+  font-size: 15px;
+  line-height: 27px;
 }
 </style>
