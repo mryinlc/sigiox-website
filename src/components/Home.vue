@@ -22,14 +22,16 @@
                        circle></el-button>
           </introduce-block>
         </div>
-        <!-- <el-row>
-          <el-button>默认按钮</el-button>
-          <el-button type="primary">主要按钮</el-button>
-          <el-button type="success">成功按钮</el-button>
-          <el-button type="info">信息按钮</el-button>
-          <el-button type="warning">警告按钮</el-button>
-          <el-button type="danger">危险按钮</el-button>
-        </el-row> -->
+        <p class="introduce-title">主要成员</p>
+        <el-button id="view-more"
+                   type="primary"
+                   @click="viewMore">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+        <div id="person-list-block">
+          <person-image v-for="(personInfo, idx) in personList"
+                        :key="idx"
+                        :personInfo="personInfo"></person-image>
+        </div>
+        <news-navigator></news-navigator>
       </div>
       <div class="footer">
         <Footer></Footer>
@@ -44,6 +46,8 @@ import { Button } from 'element-ui'
 import Navbar from './page_structures/Navbar.vue'
 import Footer from './page_structures/Footer.vue'
 import IntroduceBlock from './content_structures/IntroduceBlock.vue'
+import PersonImage from './content_structures/PersonImage.vue'
+import NewsNavigator from './content_structures/NewsNavigator.vue'
 
 export default {
   name: 'Home',
@@ -66,6 +70,28 @@ export default {
           text: '区块链，就是一个又一个区块组成的链条。每一个区块中保存了一定的信息，它们按照各自产生的时间顺序连接成链条。这个链条被保存在所有的服务器中，只要整个系统中有一台服务器可以工作，整条区块链就是安全的。相比于传统的网络，区块链具有两大核心特点：一是数据难以篡改、二是去中心化。基于这两个特点，区块链所记录的信息更加真实可靠，可以帮助解决人们互不信任的问题。',
           icon: 'el-icon-share'
         }
+      ],
+      personList: [
+        {
+          info: '熊润群 副教授 博士',
+          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-e1652621608567-pourdrzwbqlel8pmuls8uws8ftgj92x9jgffa1cths.jpg'
+        },
+        {
+          info: '徐祝庆 博士',
+          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/2-poiokzs151434z9543pqmc3npq1dxdgghdasjvw7kg.jpeg'
+        },
+        {
+          info: '谢玮 博士',
+          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/1-poiopemr815jn2uecidotq0k3uaf27z3f7junncocw.jpg'
+        },
+        {
+          info: '陈慈媛 博士',
+          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/4-poupyae5yg3ym7i3icjy9wj8zz8plyil4lxwwdp6c0.jpeg'
+        },
+        {
+          info: '田巍 博士',
+          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/博士-田巍-1-e1652619694577-poupzswsyu6lblawo04bairzgbs00ej0o3s2qfgcb4.jpeg'
+        },
       ]
     }
   },
@@ -74,12 +100,19 @@ export default {
     // 'el-row': Row,
     Navbar,
     Footer,
-    IntroduceBlock
+    IntroduceBlock,
+    PersonImage,
+    NewsNavigator
+  },
+  methods: {
+    viewMore () {
+      this.$router.push('/memeber')
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
 .mask {
   position: absolute;
   top: 0;
@@ -133,21 +166,37 @@ export default {
 
 .medium {
   flex: 1 0 auto;
-  height: 1000px;
-  padding: 100px 0 100px 16%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .medium .introduce {
-  width: 80%;
+  width: 68%;
   display: flex;
   flex-direction: row nowrap;
   justify-content: space-around;
 }
 
 .medium .introduce-title {
-  margin: 0 auto 60px 28%;
+  width: 68%;
+  text-align: center;
   font-weight: 700;
   font-size: 35px;
+  margin: 50px 0;
+}
+
+#person-list-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 55%;
+  margin: 40px 0;
+}
+
+#view-more {
+  margin: -20px 0 20px 0;
 }
 
 .footer {
