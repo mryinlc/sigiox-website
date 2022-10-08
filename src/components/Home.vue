@@ -23,15 +23,40 @@
           </introduce-block>
         </div>
         <p class="introduce-title">主要成员</p>
-        <el-button id="view-more"
+        <el-button class="view-more"
                    type="primary"
-                   @click="viewMore">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+                   @click="viewMoreMemeber">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
         <div id="person-list-block">
           <person-image v-for="(personInfo, idx) in personList"
                         :key="idx"
                         :personInfo="personInfo"></person-image>
         </div>
-        <news-navigator></news-navigator>
+
+        <div id="home-info-block">
+          <div class="info-list-container">
+            <p class="introduce-title">新闻</p>
+            <div class="info-list">
+              <info-block v-for="(info, idx) in newsList"
+                          :key="idx"
+                          :info="info"></info-block>
+            </div>
+            <el-button class="view-more-info"
+                       type="primary"
+                       @click="viewMoreNews">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+          </div>
+          <div class="info-list-container">
+            <p class="introduce-title">通知</p>
+            <div class="info-list">
+              <info-block v-for="(info, idx) in newsList"
+                          :key="idx"
+                          :info="info"></info-block>
+            </div>
+            <el-button class="view-more-info"
+                       type="primary"
+                       @click="viewMoreNews">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+          </div>
+        </div>
+
       </div>
       <div class="footer">
         <Footer></Footer>
@@ -48,6 +73,8 @@ import Footer from './page_structures/Footer.vue'
 import IntroduceBlock from './content_structures/IntroduceBlock.vue'
 import PersonImage from './content_structures/PersonImage.vue'
 import NewsNavigator from './content_structures/NewsNavigator.vue'
+import InfoBlock from './content_structures/InfoBlock.vue'
+
 
 export default {
   name: 'Home',
@@ -92,6 +119,20 @@ export default {
           info: '田巍 博士',
           imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/博士-田巍-1-e1652619694577-poupzswsyu6lblawo04bairzgbs00ej0o3s2qfgcb4.jpeg'
         },
+      ],
+      newsList: [
+        {
+          day: 8,
+          date: 2022.10,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 10,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        }
       ]
     }
   },
@@ -102,11 +143,15 @@ export default {
     Footer,
     IntroduceBlock,
     PersonImage,
-    NewsNavigator
+    NewsNavigator,
+    InfoBlock
   },
   methods: {
-    viewMore () {
+    viewMoreMemeber () {
       this.$router.push('/memeber')
+    },
+    viewMoreNews () {
+      this.$router.push('/news')
     }
   }
 }
@@ -195,8 +240,48 @@ export default {
   margin: 40px 0;
 }
 
-#view-more {
+.view-more {
   margin: -20px 0 20px 0;
+}
+
+#home-info-block {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-info-block .info-list-container {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #home-info-block .info-list-container:last-child {
+  border-left: 1px solid rgb(171, 171, 171);
+} */
+
+#home-info-block .info-list-container .info-list {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home-info-block .info-list-container .view-more-info {
+  margin: 20px 0;
 }
 
 .footer {
