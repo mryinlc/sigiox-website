@@ -1,15 +1,15 @@
 <template>
-  <div id="info">
-    <div id="date">
-      <p id="day">{{info.day}}</p>
-      <p id="year-month">{{info.date}}</p>
+  <div id="info-block-info">
+    <div id="info-block-date">
+      <p id="info-block-day">{{info.day}}</p>
+      <p id="info-block-year-month">{{info.date}}</p>
     </div>
-    <div id="message">
-      <p id="title">{{info.title}}</p>
-      <p id="content">{{info.message}}</p>
+    <div id="info-block-message">
+      <p id="info-block-title">{{info.title}}</p>
+      <p id="info-block-content">{{info.message}}</p>
     </div>
-    <div id="icon">
-      <img id="icon-img"
+    <div id="info-block-icon">
+      <img id="info-block-icon-img"
            src="@/assets/images/icon_jiantou.png" />
     </div>
   </div>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-#info {
+#info-block-info {
   width: 92%;
   height: auto;
   padding: 20px;
@@ -35,7 +35,7 @@ export default {
   background: #f2f6fa;
   border-radius: 10px;
 }
-#date {
+#info-block-date {
   width: 10%;
   height: 70%;
   display: flex;
@@ -43,21 +43,21 @@ export default {
   justify-content: space-around;
   align-items: center;
 }
-#day {
+#info-block-day {
   text-align: left;
   font-weight: 600;
   font-size: 20px;
   margin: 0;
   padding: 0;
 }
-#year-month {
+#info-block-year-month {
   text-align: left;
   font-weight: 350;
   font-size: 15px;
   margin: 0;
   padding: 0;
 }
-#message {
+#info-block-message {
   width: 70%;
   height: 70%;
   display: flex;
@@ -66,7 +66,7 @@ export default {
   border-left: 1px solid rgb(171, 171, 171);
   padding-left: 20px;
 }
-#title {
+#info-block-title {
   text-align: left;
   font-weight: 600;
   font-size: 20px;
@@ -77,7 +77,7 @@ export default {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-#content {
+#info-block-content {
   text-align: left;
   font-size: 13px;
   color: #606266;
@@ -89,7 +89,7 @@ export default {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
-#icon {
+#info-block-icon {
   width: 10%;
   height: 70%;
   display: flex;

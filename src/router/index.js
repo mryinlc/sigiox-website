@@ -7,6 +7,7 @@ import Paper from '../components/Paper'
 import Patent from '../components/Patent'
 import Project from '../components/Project'
 import Seminar from '../components/Seminar'
+import Notice from '../components/Notice'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,10 @@ const router = new VueRouter({
     {
       path: '/project',
       component: Project
+    },
+    {
+      path: '/notice',
+      component: Notice
     },
     {
       path: '/seminar',

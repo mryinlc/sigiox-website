@@ -19,6 +19,8 @@
                        class="navigator home_active">专利</router-link>
           <router-link to="/paper"
                        class="navigator home_active">论文</router-link>
+          <router-link to="/notice"
+                       class="navigator home_active">通知</router-link>
           <router-link to="/news"
                        class="navigator home_active">新闻</router-link>
           <!-- <router-link to="/solution_index"
@@ -138,7 +140,7 @@ export default {
   flex-direction: row;
 }
 .navbar .container .menu > .navigator:first-child {
-  margin-left: 380px;
+  margin-left: 320px;
 }
 .navbar .container .menu > .navigator {
   display: inline-block;

@@ -34,26 +34,31 @@
 
         <div id="home-info-block">
           <div class="info-list-container">
-            <p class="introduce-title">新闻</p>
+            <div class="info-title-container">
+              <p class="introduce-title">新闻</p>
+              <el-button class="view-more-info"
+                         type="text"
+                         @click="viewMoreNews">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+            </div>
             <div class="info-list">
               <info-block v-for="(info, idx) in newsList"
                           :key="idx"
                           :info="info"></info-block>
             </div>
-            <el-button class="view-more-info"
-                       type="primary"
-                       @click="viewMoreNews">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+
           </div>
           <div class="info-list-container">
-            <p class="introduce-title">通知</p>
+            <div class="info-title-container">
+              <p class="introduce-title">通知</p>
+              <el-button class="view-more-info"
+                         type="text"
+                         @click="viewMoreNotice">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+            </div>
             <div class="info-list">
-              <info-block v-for="(info, idx) in newsList"
+              <info-block v-for="(info, idx) in noticeList"
                           :key="idx"
                           :info="info"></info-block>
             </div>
-            <el-button class="view-more-info"
-                       type="primary"
-                       @click="viewMoreNews">查看更多<i class="el-icon-arrow-right el-icon--right"></i></el-button>
           </div>
         </div>
 
@@ -72,7 +77,6 @@ import Navbar from './page_structures/Navbar.vue'
 import Footer from './page_structures/Footer.vue'
 import IntroduceBlock from './content_structures/IntroduceBlock.vue'
 import PersonImage from './content_structures/PersonImage.vue'
-import NewsNavigator from './content_structures/NewsNavigator.vue'
 import InfoBlock from './content_structures/InfoBlock.vue'
 
 
@@ -132,6 +136,50 @@ export default {
           date: 2022.09,
           title: '组会暂停通知',
           message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 11,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 12,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 13,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        }
+      ],
+      noticeList: [
+        {
+          day: 8,
+          date: 2022.10,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 10,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 11,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
+        },
+        {
+          day: 12,
+          date: 2022.09,
+          title: '组会暂停通知',
+          message: '2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。2022年8月的组会暂停一个月，开学后恢复正常。'
         }
       ]
     }
@@ -143,7 +191,6 @@ export default {
     Footer,
     IntroduceBlock,
     PersonImage,
-    NewsNavigator,
     InfoBlock
   },
   methods: {
@@ -152,6 +199,9 @@ export default {
     },
     viewMoreNews () {
       this.$router.push('/news')
+    },
+    viewMoreNotice () {
+      this.$router.push('/notice')
     }
   }
 }
@@ -250,7 +300,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 50px 0;
 }
 
 #home-info-block .info-list-container {
@@ -259,7 +310,6 @@ export default {
   width: auto;
   height: auto;
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -268,6 +318,25 @@ export default {
 /* #home-info-block .info-list-container:last-child {
   border-left: 1px solid rgb(171, 171, 171);
 } */
+
+#home-info-block .info-list-container .info-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  height: auto;
+}
+
+#home-info-block .info-list-container .info-title-container .introduce-title {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+#home-info-block .info-list-container .info-title-container .view-more-info {
+  padding: 0;
+  margin: 0;
+}
 
 #home-info-block .info-list-container .info-list {
   width: 90%;
@@ -278,10 +347,6 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-
-#home-info-block .info-list-container .view-more-info {
-  margin: 20px 0;
 }
 
 .footer {
