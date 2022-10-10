@@ -268,10 +268,10 @@ export default {
 }
 
 .medium .introduce {
-  width: 68%;
+  width: 60%;
   display: flex;
   flex-direction: row nowrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .medium .introduce-title {
