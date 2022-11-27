@@ -2,7 +2,7 @@
   <el-card class="person-info-block">
     <div id="img-container">
       <img id="img"
-           :src="person.imgUrl" />
+           :src="require('@/' + person.imgUrl)" />
     </div>
     <div class="message-blcok">
       <p id="person-name">{{person.name}}</p>

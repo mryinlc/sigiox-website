@@ -23,22 +23,6 @@
                        class="navigator home_active">通知</router-link>
           <router-link to="/news"
                        class="navigator home_active">新闻</router-link>
-          <!-- <router-link to="/solution_index"
-                       class="navigator home_active">
-            <i>解决方案</i>
-            <div class="navigator_level2">
-              <div class="navigator_level2_center">
-                <router-link to="/solution"
-                             class="navigator_item">微官网</router-link>
-                <router-link to="/solution_mall"
-                             class="navigator_item">微商城</router-link>
-                <router-link to="/solution_distribution"
-                             class="navigator_item">微分销</router-link>
-                <router-link to="/solution_member"
-                             class="navigator_item">微会员</router-link>
-              </div>
-            </div>
-          </router-link> -->
         </div>
         <div class="func">
           <router-link class="navigator"

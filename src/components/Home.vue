@@ -105,23 +105,23 @@ export default {
       personList: [
         {
           info: '熊润群 副教授 博士',
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-e1652621608567-pourdrzwbqlel8pmuls8uws8ftgj92x9jgffa1cths.jpg'
+          imgUrl: 'assets/images/memeber_imgs/xiongrunqun.jpeg'
         },
         {
           info: '徐祝庆 博士',
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/2-poiokzs151434z9543pqmc3npq1dxdgghdasjvw7kg.jpeg'
+          imgUrl: 'assets/images/memeber_imgs/xuzhuqing.jpeg'
         },
         {
           info: '谢玮 博士',
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/1-poiopemr815jn2uecidotq0k3uaf27z3f7junncocw.jpg'
+          imgUrl: 'assets/images/memeber_imgs/xiewei.jpeg'
         },
         {
           info: '陈慈媛 博士',
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/4-poupyae5yg3ym7i3icjy9wj8zz8plyil4lxwwdp6c0.jpeg'
+          imgUrl: 'assets/images/memeber_imgs/chenciyuan.jpeg'
         },
         {
           info: '田巍 博士',
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/博士-田巍-1-e1652619694577-poupzswsyu6lblawo04bairzgbs00ej0o3s2qfgcb4.jpeg'
+          imgUrl: 'assets/images/memeber_imgs/tianwei.jpeg'
         },
       ],
       newsList: [

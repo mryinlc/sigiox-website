@@ -1,8 +1,8 @@
 <template>
-  <div id="info-block">
-    <img id="img"
-         :src="personInfo.imgUrl" />
-    <p id="p">{{personInfo.info}}</p>
+  <div class="person-img-info-block">
+    <img class="img"
+         :src="require('@/'+personInfo.imgUrl)" />
+    <p class="p">{{personInfo.info}}</p>
   </div>
 </template>
 
@@ -14,19 +14,25 @@ export default {
 </script>
 
 <style scoped>
-#info-block {
-  height: 210px;
-  width: 155px;
+.person-img-info-block {
+  /* height: 210px;
+  width: 155px; */
+  height: auto;
+  width: 18%;
 }
-#img {
-  height: 180px;
-  width: 135px;
+.person-img-info-block .img {
+  /* height: 180px;
+  width: 135px; */
+  height: auto;
+  width: 95%;
 }
-#p {
+.person-img-info-block .p {
+  /* font-size: 0.8vmax; */
   font-size: 14px;
   color: #606266;
   text-align: center;
-  width: 135px;
+  /* width: 135px; */
+  width: 95%;
   height: auto;
 }
 </style>

@@ -55,29 +55,29 @@ export default {
   data () {
     return {
       facultyInfo: {
-        imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-e1652621608567-pourdrzwow8e4aw6lvwucg0qsekfz733kccrbr5heo.jpg',
+        imgUrl: 'assets/images/memeber_imgs/xiongrunqun.jpeg',
         name: '熊润群',
         identity: '博士 & 副教授',
         mail: 'rqxiong@seu.edu.cn',
       },
       phdStudents: [
         {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/2-poiokzs1i6r2o1fovduc3vc62b5anhmai984llovhc.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/xuzhuqing.jpeg',
           name: '徐祝庆',
           identity: '博士',
           mail: 'zqxu@seu.edu.cn',
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/1-poiopemrl6sj650y3siab992gfebsc4xg3h6pd5c9s.jpg',
+          imgUrl: 'assets/images/memeber_imgs/xiewei.jpeg',
           name: '谢玮',
           identity: '博士',
           mail: 'cyecharlie@hotmail.com',
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/4-poupyae6blqy59on9mojrfrrckcmc2of5hv8y3hu8w.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/chenciyuan.jpeg',
           name: '陈慈媛',
           identity: '博士',
           mail: 'cychen@seu.edu.cn',
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-田巍-1-e1652619694577-poupzswtbztkunhgfa8ws20hswvwqiouozpes59080.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/tianwei.jpeg',
           name: '田巍',
           identity: '博士',
           mail: 'tianwee@hotmail.com',
@@ -85,42 +85,42 @@ export default {
       ],
       masterStudents: [
         {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-徐佳君-e1652621513611-pourbap8ah75yabcc16os1bg07onxu2rj6gaor17ww.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/xujiajun.jpeg',
           name: '徐佳君',
           identity: '专硕',
           mail: '747180864@qq.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/2-pourhietu7ce8jgxt00hr03nqi5xjwwpqtn6ybm6ow.png',
+          imgUrl: 'assets/images/memeber_imgs/yuxinze.jpeg',
           name: '于新泽',
           identity: '专硕',
           mail: '1527010766@qq.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-董夕瑞-e1652622024269-pouron0rnz3oa3476kxn5pchwp14xa7fq3qqyv1pi8.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/dongxirui.jpeg',
           name: '董夕瑞',
           identity: '学硕',
           mail: '18061233789@163.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-叶炳辰-e1652622461958-pous01s8mkpz7ojjk0hlxboxi2sjd0i4yktxos4nz4.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/yebingchen.jpeg',
           name: '叶炳辰',
           identity: '学硕',
           mail: 'bingchenye@seu.edu.cn'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-林敬凯-e1652622491851-pous0tzdyg5lcx8182jtilc8z1tn1tg91kh61d66vk.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/linjingkai.jpeg',
           name: '林敬凯',
           identity: '学硕',
           mail: '948432920@qq.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-虞泽凡-pi2p92f0s6elm9bnlnwq2bsjniicyk6ul6h5cbd9wg.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/yuzefan.jpeg',
           name: '虞泽凡',
           identity: '专硕',
           mail: '3488266048@qq.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-尹路超-e1652018642956-poim2bajtez938yzmemfkpvsmizmckgocjlgtwchu8.jpg',
+          imgUrl: 'assets/images/memeber_imgs/yinluchao.jpeg',
           name: '尹路超',
           identity: '专硕',
           mail: 'mryinlc@seu.edu.cn'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-肖庆-scaled-pi2p8uwawchbibg12aj40ugcjufiiv75v9bxgdvrdc.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/xiaoqing.jpeg',
           name: '肖庆',
           identity: '专硕',
           mail: 'xiaoqing@seu.edu.cn'
@@ -128,12 +128,12 @@ export default {
       ],
       alumni: [
         {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-邹荣誉-e1652621203712-pour37b9szr9i895ctcxsm327cosds3t4053yotxeo.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/zourongyu.jpeg',
           name: '邹荣誉',
           identity: '专硕',
           mail: '1010399307@qq.com'
         }, {
-          imgUrl: 'http://106.15.249.85/wp-content/uploads/elementor/thumbs/-2021_12_06-16_29_04-e1652621379704-pour7sqv7u1q9lkuisv9zgc6r61e0ickeqykfe0mzk.jpeg',
+          imgUrl: 'assets/images/memeber_imgs/liangchuan.jpeg',
           name: '梁川',
           identity: '专硕',
           mail: '156652677@qq.com'

@@ -2,8 +2,8 @@
   <el-card class="introduce-block-box-card">
     <div>
       <slot></slot>
-      <p id="introduce-block-title">{{content.title}}</p>
-      <p id="introduce-block-content">{{content.text}}</p>
+      <p class="introduce-block-title">{{content.title}}</p>
+      <p class="introduce-block-content">{{content.text}}</p>
     </div>
   </el-card>
 </template>
@@ -22,14 +22,15 @@ export default {
 
 <style scoped>
 .introduce-block-box-card {
-  height: 420px;
-  width: 350px;
+  height: auto;
+  /* width: 350px; */
+  width: 30%;
 }
-#introduce-block-title {
+.introduce-block-box-card .introduce-block-title {
   font-weight: 600;
   font-size: 20px;
 }
-#introduce-block-content {
+.introduce-block-box-card .introduce-block-content {
   color: #606266;
   font-weight: 350;
   font-size: 15px;
