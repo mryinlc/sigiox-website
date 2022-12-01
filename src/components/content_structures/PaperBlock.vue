@@ -1,9 +1,10 @@
 <template>
   <div class="paper-block">
-    <i class="el-icon-document"></i> Runqun Xiong, Lan Xiong, Feng Shan, Junzhou Luo: <a href="http://localhost:8080/">SBHA: An Undetectable Black Hole Attack on UANET in the Sky.</a> Concurrency and Computation: Practice and Experience, 2021:e6700.
+    <i class="el-icon-document"></i> {{paperInfo.author}} <a :href="paperInfo.pdfUrl">{{paperInfo.title}}</a> {{paperInfo.source}}
+    <!-- <i class="el-icon-document"></i> Runqun Xiong, Lan Xiong, Feng Shan, Junzhou Luo: <a href="http://localhost:8080/">SBHA: An Undetectable Black Hole Attack on UANET in the Sky.</a> Concurrency and Computation: Practice and Experience, 2021:e6700. -->
     <div>
-      <el-button size="mini">PDF</el-button>
-      <el-button size="mini">Code</el-button>
+      <el-button size="mini"><a :href="paperInfo.pdfUrl">PDF</a></el-button>
+      <el-button size="mini"><a :href="paperInfo.codeUrl">Code</a></el-button>
     </div>
   </div>
 </template>
@@ -15,7 +16,8 @@ export default {
   name: 'PaperBlcok',
   components: {
     'el-button': Button
-  }
+  },
+  props: ['paperInfo']
 }
 </script>
 
@@ -43,8 +45,11 @@ export default {
   border-color: #1a7fe4;
 }
 .paper-block button:hover {
-  color: #fff;
   border-color: #1a7fe4;
   background-color: #1a7fe4;
+}
+.paper-block button:hover a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
